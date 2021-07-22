@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<html>
-<body>
+---
+layout: default
+---
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
 
-</body>
-</html>
+{% include career-profile.html %}
+
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
+
+{% include experiences.html %}
+
+{% include projects.html %}
+
+{% include publications.html %}
+
+{% include skills.html %}
